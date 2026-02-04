@@ -78,7 +78,7 @@ Download and extract the files from `dir_files` into `C:/LocalForge`:
 
 Extract to:
 ```
-C:/LocalForge/bin/apache
+C:/LocalForge/bin/apache/{VERSION_FOLDER}/
 ```
 
 #### PHP
@@ -87,7 +87,7 @@ C:/LocalForge/bin/apache
 
 Extract to:
 ```
-C:/LocalForge/bin/php
+C:/LocalForge/bin/php/{VERSION_FOLDER}/
 ```
 
 #### MySQL
@@ -96,11 +96,19 @@ C:/LocalForge/bin/php
 
 Extract to:
 ```
-C:/LocalForge/bin/mysql
+C:/LocalForge/bin/mysql/{VERSION_FOLDER}/
 ```
 
 > ⚠️ Use the **ZIP archive**, not the installer.
 
+#### Mailpit
+- Mailpit (ZIP Archive)
+- https://github.com/axllent/mailpit/releases/download/v1.29.0/mailpit-windows-amd64.zip
+
+Extract to:
+```
+C:/LocalForge/bin/mailpit/{VERSION_FOLDER}/
+```
 ---
 
 ## Usage
