@@ -184,4 +184,3 @@ Bug reports, enhancements, and refactors are all appreciated.
 ## License
 
 MIT License
->>>>>>> 9321c67 (initial release)
