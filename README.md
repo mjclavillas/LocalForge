@@ -141,8 +141,11 @@ C:/LocalForge/www/
 Example:
 ```
 www/
-├── project.test/
-├── project2.test/
+├── project
+├── project2
+├── project3
+├── project4
+├── project5
 ```
 
 Each folder name becomes a local domain.
