@@ -211,4 +211,4 @@ Bug reports, enhancements, and refactors are all appreciated.
 
 ## License
 
-MIT License
+This project is open-sourced software licensed under the **MIT License**.
