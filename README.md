@@ -78,27 +78,39 @@ Download and extract the files from `dir_files` into `C:/LocalForge`:
 
 Extract to:
 ```
-C:/LocalForge/bin/apache/{VERSION_FOLDER}/
+C:/LocalForge/bin/apache/{VERSION}
 ```
 
+Example:
+```
+C:/LocalForge/bin/apache/httpd-2.4.66-260107-Win64-VS18
+```
 #### PHP
 - Official PHP for Windows
 - https://windows.php.net/download/
 
 Extract to:
 ```
-C:/LocalForge/bin/php/{VERSION_FOLDER}/
+C:/LocalForge/bin/php/{VERSION}
 ```
 
+Example:
+```
+C:/LocalForge/bin/mysql/php-8.2.30-Win32-vs16-x64
+```
 #### MySQL
 - MySQL Community Server (ZIP Archive)
 - https://dev.mysql.com/downloads/mysql/
 
 Extract to:
 ```
-C:/LocalForge/bin/mysql/{VERSION_FOLDER}/
+C:/LocalForge/bin/mysql/{VERSION}
 ```
 
+Example:
+```
+C:/LocalForge/bin/mysql/mysql-8.0.36-winx64
+```
 > ⚠️ Use the **ZIP archive**, not the installer.
 
 #### Mailpit
@@ -107,7 +119,12 @@ C:/LocalForge/bin/mysql/{VERSION_FOLDER}/
 
 Extract to:
 ```
-C:/LocalForge/bin/mailpit/{VERSION_FOLDER}/
+C:/LocalForge/bin/mailpit/{VERSION}
+```
+
+Example:
+```
+C:/LocalForge/bin/mysql/1.28.2
 ```
 ---
 
