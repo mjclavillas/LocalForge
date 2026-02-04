@@ -1,0 +1,62 @@
+ServerRoot "{APACHE_ROOT}"
+ServerName localhost
+Listen 80
+
+# Core modules
+LoadModule dir_module modules/mod_dir.so
+LoadModule mime_module modules/mod_mime.so
+LoadModule vhost_alias_module modules/mod_vhost_alias.so
+LoadModule rewrite_module modules/mod_rewrite.so
+LoadModule authz_core_module modules/mod_authz_core.so
+LoadModule authz_host_module modules/mod_authz_host.so
+LoadModule alias_module modules/mod_alias.so
+LoadModule autoindex_module modules/mod_autoindex.so
+
+# PHP Module
+LoadModule php_module "{PHP_ROOT}/php8apache2_4.dll"
+PHPIniDir "{PHP_ROOT}"
+AddHandler application/x-httpd-php .php
+
+# Default DocumentRoot
+DocumentRoot "{WWW_ROOT}"
+
+# Default Directory
+<Directory "{WWW_ROOT}">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
+    AddHandler application/x-httpd-php .php
+</Directory>
+
+# PHPMyAdmin
+Alias /phpmyadmin "{LOCALFORGE_ROOT}/etc/apps/phpMyAdmin"
+<Directory "{LOCALFORGE_ROOT}/etc/apps/phpMyAdmin">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
+    AddHandler application/x-httpd-php .php
+    DirectoryIndex index.php index.html
+</Directory>
+
+# Wildcard Virtual Host (*.test)
+
+<VirtualHost *:80>
+    ServerName localforge.test
+    ServerAlias *.test
+    VirtualDocumentRoot "{WWW_ROOT}/%1"
+
+    <Directory "{WWW_ROOT}">
+        Options +Indexes +FollowSymLinks -MultiViews
+        AllowOverride All
+        Require all granted
+        DirectoryIndex index.php index.html
+    </Directory>
+
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteCond %{HTTP_HOST} ^([^.]+)\.test$ [NC]
+        RewriteCond "{WWW_ROOT}/%1/public/index.php" -f
+        RewriteCond %{REQUEST_URI} !^/public/
+        RewriteRule ^(.*)$ /public/$1 [L,PT]
+    </IfModule>
+</VirtualHost>
