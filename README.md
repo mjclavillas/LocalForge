@@ -1,8 +1,4 @@
 # LocalForge
-<<<<<<< HEAD
-LocalForge is a lightweight local development manager built to simplify working with multiple local projects. It allows you to run multiple local sites such as `project.test` or `project2.test` with minimal setup by automatically handling Apache virtual hosts and system host entries.
-=======
-
 LocalForge is a lightweight **local development manager built with C#** for Windows. It allows you to run multiple local websites using `.test` domains (e.g., `project.test`, `project2.test`) by automatically configuring **Apache virtual hosts**, managing the **Windows hosts file**, and controlling local services.
 
 LocalForge is designed to be simple, fast, and transparent—no Docker, no virtual machines, just a clean local stack you control.
